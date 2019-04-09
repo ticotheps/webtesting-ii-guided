@@ -4,6 +4,7 @@ import { render } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import App from './App';
+import waitForExpect from 'wait-for-expect';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -22,5 +23,6 @@ it('renders Hello World', () => {
 
   const { getByText } = render(<App />); 
   
-  getByText('Hello World');
+  // getByText(/hello World/i);
+  expect(queryByText(/hello world/i)).not.toBeNull();
 });
