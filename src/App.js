@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import Greeting from './greeting/Greeting.js';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +14,7 @@ class App extends Component {
         <h2>Hello World</h2>
         <button onClick={this.greet}>Greet</button>
         <button onClick={this.bye}>Bye</button>
-        <div>{this.state.greeting}</div>
+        <Greeting msg={this.state.greeting}></Greeting>
       </div>
     );
   }
