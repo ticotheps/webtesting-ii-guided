@@ -39,5 +39,14 @@ describe('<App />', () => {
     fireEvent.click(button);
     getByText(/hello web xvii/i);
   });
+
+  it('says bye to the team', () => {
+    const { getByText } = render(<App />);
+
+    const button = getByText(/bye/i);
+
+    fireEvent.click(button);
+    getByText(/bye web xvii/i);
+  });
 });
 

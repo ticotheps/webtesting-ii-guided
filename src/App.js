@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +19,10 @@ class App extends Component {
 
   greet = () => {
     this.setState({ greeting: 'Hello Web XVII' });
+  };
+
+  bye = () => {
+    this.setState({ greeting: 'Bye Web XVII' });
   };
 }
 

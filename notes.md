@@ -17,5 +17,3 @@
 8) Adds 'queryByText' to the list of desctructured items from the 'render' object inthe 'renders Hello World' test case.
 
 9) Creates an assertion in the 'renders Hello World' test case using 'expect(queryByText(/hello world/i)).not.toBeNull();'.
-
-10) 
