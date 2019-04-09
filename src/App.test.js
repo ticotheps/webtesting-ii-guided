@@ -16,6 +16,11 @@ it('renders successfully', () => {
 });
 
 it('renders Hello World', () => {
-  const helpers = render(<App />);
-  console.log('helpers', helpers);
+  // const helpers = render(<App />); 
+  // the render method returns an object that gives you methods to help you find things in the DOM.
+  // console.log('helpers', helpers);
+
+  const { getByText } = render(<App />); 
+  
+  getByText('Hello World');
 });
