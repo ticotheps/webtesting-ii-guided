@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render } from 'react-testing-library';
+import { render, fireEvent } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import App from './App';
@@ -30,5 +30,14 @@ describe('<App />', () => {
   // The DIFFERENCE between 'getByText' and 'queryByText':
   // 'getByText' can be used to check the presence of an element on the DOM and throws an error if the test fails.
   // 'queryByText' can be used to do the same thing, but returns null if the test fails.
+
+  it('greets the team', () => {
+    const { getByText } = render(<App />);
+
+    const button = getByText(/greet/i);
+
+    fireEvent.click(button);
+
+  });
 });
 
