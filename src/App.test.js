@@ -4,7 +4,6 @@ import { render } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import App from './App';
-import waitForExpect from 'wait-for-expect';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -21,7 +20,7 @@ it('renders Hello World', () => {
   // the render method returns an object that gives you methods to help you find things in the DOM.
   // console.log('helpers', helpers);
 
-  const { getByText } = render(<App />); 
+  const { getByText, queryByText, debug } = render(<App />); 
   
   // getByText(/hello World/i);
   expect(queryByText(/hello world/i)).not.toBeNull();
