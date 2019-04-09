@@ -11,6 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Hello World</h2>
+        <button onClick={this.greet}>Greet</button>
+        <button onClick={this.bye}>Bye</button>
+        <div>{this.state.greeting}</div>
       </div>
     );
   }

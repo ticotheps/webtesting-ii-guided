@@ -37,7 +37,7 @@ describe('<App />', () => {
     const button = getByText(/greet/i);
 
     fireEvent.click(button);
-
+    getByText(/hello web xvii/i);
   });
 });
 
